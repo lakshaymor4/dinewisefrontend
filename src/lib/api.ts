@@ -1,7 +1,7 @@
 import { getToken } from "./auth"
 import { redirect } from 'next/navigation';
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://backend-dine-wise.vercel.app/';
 
 export const api = async (endpoint: string, options: RequestInit = {}) => {
     const token = getToken();
