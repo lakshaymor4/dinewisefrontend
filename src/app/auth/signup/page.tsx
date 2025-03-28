@@ -24,7 +24,7 @@ export default function SignupPage() {
         body: JSON.stringify(formData),
       });
       router.push('/auth/login');
-    } catch (err) {
+    } catch (_err) {
       setError('Failed to create account');
     }
   };

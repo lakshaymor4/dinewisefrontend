@@ -49,7 +49,7 @@ export default function ManageRestaurantsPage() {
       setLoading(true);
       const data = await api('/restro/getall');
       setRestaurants(data);
-    } catch (err) {
+    } catch (_err) {
       setError('Failed to fetch restaurants');
     } finally {
       setLoading(false);
@@ -86,7 +86,7 @@ export default function ManageRestaurantsPage() {
       setSuccessMessage('Restaurant updated successfully');
       setEditing(null);
       fetchRestaurants();
-    } catch (err) {
+    } catch (_err) {
       setError('Failed to update restaurant');
     }
   };

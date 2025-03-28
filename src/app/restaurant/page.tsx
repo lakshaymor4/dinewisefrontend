@@ -62,7 +62,7 @@ export default function RestaurantsPage() {
       setReview('');
       setSelectedRestaurant(null);
       fetchRestaurants();
-    } catch (err) {
+    } catch (_err) {
       setError('Failed to submit review');
     }
   };

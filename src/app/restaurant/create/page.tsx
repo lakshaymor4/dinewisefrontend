@@ -29,7 +29,7 @@ export default function CreateRestaurantPage() {
         body: JSON.stringify(formData),
       });
       router.push('/restaurant/manage');
-    } catch (err) {
+    } catch (_err) {
       setError('Failed to create restaurant');
     }
   };

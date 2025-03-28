@@ -26,7 +26,7 @@ export default function LoginPage() {
 
       setToken(response.access_token);
       router.push('/');
-    } catch (err) {
+    } catch (_err) {
       setError('Invalid email or password');
     }
   };
@@ -70,7 +70,7 @@ export default function LoginPage() {
         </button>
       </form>
       <p className="mt-4 text-center text-gray-400">
-        Don't have an account?{' '}
+        Don&apos;t have an account?{' '}
         <Link href="/auth/signup" className="text-blue-400 hover:text-blue-300 hover:underline">
           Sign up
         </Link>

@@ -35,7 +35,7 @@ export default function ReviewsPage() {
     try {
       const data = await api('/review/getall');
       setReviews(data);
-    } catch (err) {
+    } catch (_err) {
       setError('Failed to fetch reviews');
     }
   };
@@ -48,7 +48,7 @@ export default function ReviewsPage() {
       });
       setEditingId(null);
       fetchReviews();
-    } catch (err) {
+    } catch (_err) {
       setError('Failed to update review');
     }
   };
@@ -62,7 +62,7 @@ export default function ReviewsPage() {
         body: JSON.stringify({ id }),
       });
       fetchReviews();
-    } catch (err) {
+    } catch (_err) {
       setError('Failed to delete review');
     }
   };
