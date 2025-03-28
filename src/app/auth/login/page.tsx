@@ -27,6 +27,7 @@ export default function LoginPage() {
       setToken(response.access_token);
       router.push('/');
     } catch (_err) {
+      
       setError('Invalid email or password');
     }
   };
